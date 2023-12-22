@@ -50,8 +50,11 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="› %{\$reset_color%}"
 MODE_INDICATOR="%{\$fg_bold[magenta]%}<%{\$reset_color%}%{\$fg[magenta]%}<<%{\$reset_color%}"
 EOF
 
-# Update ZSH_THEME in .zshrc
-sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
+# Correcting the issue with the custom theme script in .zshrc
+sed -i '/^source \$ZSH\/oh-my-zsh.sh/a \# Custom theme configuration\nsource ~/.oh-my-zsh/custom/themes/simple-path.theme-zsh-theme' ~/.zshrc
+
+# Apply changes to the current shell session
+source ~/.zshrc
 
 # Restart shell to apply changes
 exec zsh
