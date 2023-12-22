@@ -21,17 +21,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Clone zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+# Clone simple-path theme
+git clone https://github.com/zhk3r/wsl.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/simple-path.zsh-theme
+
 # Modify .zshrc to include new plugins
 sed -i '/plugins=(git)/a plugins=(zsh-syntax-highlighting)\nplugins=(zsh-autosuggestions)' ~/.zshrc
-
-# Update ZSH_THEME in .zshrc to use 'simple-path'
-sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
-
-# Ensure the custom themes directory exists
-mkdir -p ~./oh-my-zsh/custom/themes
-
-# Move 'simple-path.zsh-theme' from the cloned repo to the custom themes directory
-mv simple-path.zsh-theme ~/.oh-my-zsh/custom/themes/
 
 # Update ZSH_THEME in .zshrc to use 'simple-path'
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
