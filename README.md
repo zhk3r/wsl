@@ -26,6 +26,8 @@ After creating your username and password, simply copy-paste this into your Ubun
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/master/ubuntu.sh)"
 </pre>
 
+This installs zsh+omz, autosuggestions, syntax highlighting, check.sh and dependencies.
+
 ## Why? 
 
 This is just a supporting installation script / setup help for use with my check.sh
