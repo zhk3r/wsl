@@ -9,7 +9,7 @@ fi
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 # Configure PROMPT with colored timestamp, username, and other elements
-PROMPT='%{${fg_bold[yellow]}%}[%D{%H:%M:%S}] %{${fg_bold[magenta]}%}%n%{${fg_bold[cyan]}%} $ %{${fg_bold[gree>
+PROMPT='%{${fg_bold[yellow]}%}[%D{%H:%M:%S}] %{${fg_bold[magenta]}%}%n%{${fg_bold[cyan]}%} $ %{${fg_bold[green]}%}%~ $(git_prompt_info)%{${fg_bold[$CARETCOLOR]}%}'
 
 # Set the right prompt to display vi mode and return code
 RPS1='$(vi_mode_prompt_info) ${return_code}'
