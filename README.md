@@ -5,5 +5,5 @@
 ```wsl --install -d Ubuntu-22.04```
 
 <pre lang="bash">
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/repo/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/master/ubuntu.sh)"
 </pre>
