@@ -54,5 +54,5 @@ EOF
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
 
 # Restart shell to apply changes
-source .zshrc
 exec zsh
+exec bash -l
