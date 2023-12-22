@@ -25,7 +25,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 sed -i '/plugins=(git)/a plugins=(zsh-syntax-highlighting)\nplugins=(zsh-autosuggestions)' ~/.zshrc
 
 # Create custom theme file
-cat << 'EOF' > ~/.oh-my-zsh/custom/themes/simple-path.theme-zsh-theme
+cat << 'EOF' > ~/.oh-my-zsh/custom/themes/simple-path.zsh-theme
 # Determine CARETCOLOR based on whether the user is root or not
 if [ "\$USER" = "root" ]; then
     CARETCOLOR="red"
