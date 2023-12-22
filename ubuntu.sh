@@ -21,8 +21,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Clone zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# Clone simple-path theme
-git clone https://github.com/zhk3r/wsl.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/simple-path.zsh-theme
+# Download the simple-path theme from the wsl repository
+curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/main/simple-path.zsh-theme -o ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/simple-path.zsh-theme
 
 # Modify .zshrc to include new plugins
 sed -i '/plugins=(git)/a plugins=(zsh-syntax-highlighting)\nplugins=(zsh-autosuggestions)' ~/.zshrc
