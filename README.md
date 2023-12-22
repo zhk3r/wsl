@@ -1,9 +1,31 @@
-```wsl --install```
+# Installing Windows Subsystem for Linux
 
-```wsl --Set-Default-Version 2```
+Quick and simple way to get WSL up and running, paste into your Powershell:
 
-```wsl --install -d Ubuntu-22.04```
+<pre lang="shell">
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+</pre>
+
+<pre lang="shell">
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+</pre>
+
+<pre lang="shell">
+wsl --set-default-version 2
+</pre>
+
+<pre lang="shell">
+wsl --install -d Ubuntu
+</pre>
+
+# Setting up your shell and dependencies
+
+After creating your username and password, simply copy-paste this into your Ubuntu terminal
 
 <pre lang="bash">
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/master/ubuntu.sh)"
 </pre>
+
+###### Why? 
+
+This is just a supporting installation script / setup help for use with my check.sh
