@@ -1,18 +1,30 @@
 # Installing Windows Subsystem for Linux
 
-Quick and simple way to get WSL up and running, paste into your Powershell:
+Enabling Hyper-V:
 
 <pre lang="shell">
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 </pre>
 
+Enabling Windows-Subsystem-for-Linux:
+
 <pre lang="shell">
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 </pre>
 
+Install Windows-Subsystem-For-Linux:
+
+<pre lang="shell">
+wsl --install
+</pre>
+
+Setting the default WSL version to 2:
+
 <pre lang="shell">
 wsl --set-default-version 2
 </pre>
+
+Installing Ubuntu (you are free to choose another version):
 
 <pre lang="shell">
 wsl --install -d Ubuntu
