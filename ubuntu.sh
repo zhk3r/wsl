@@ -28,7 +28,7 @@ sed -i '/plugins=(git)/a plugins=(zsh-syntax-highlighting)\nplugins=(zsh-autosug
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
 
 # Ensure the custom themes directory exists
-mkdir -p ~/.oh-my-zsh/custom/themes
+mkdir -p ~./oh-my-zsh/custom/themes
 
 # Move 'simple-path.zsh-theme' from the cloned repo to the custom themes directory
 mv simple-path.zsh-theme ~/.oh-my-zsh/custom/themes/
