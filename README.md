@@ -26,6 +26,8 @@ After creating your username and password, simply copy-paste this into your Ubun
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/master/ubuntu.sh)"
 </pre>
 
-###### Why? 
+## Why? 
 
 This is just a supporting installation script / setup help for use with my check.sh
+
+Probably not useful for anyone outside of my workplace.
