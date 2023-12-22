@@ -41,10 +41,9 @@ echo "Recommended Font: JetBrains Mono"
 echo "Download: https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip"
 
 # Prompt to restart shell
-echo -n "Restart shell now? (y/n): "
+echo "Restart shell now? (y/n): "
 read REPLY
-echo
-if [[ \$REPLY =~ ^[Yy]$ ]]
+if [ "\$REPLY" = "y" ] || [ "\$REPLY" = "Y" ]
 then
     exec zsh
 fi
