@@ -33,6 +33,16 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
 # Apply changes to the current shell session
 source ~/.zshrc
 
-# Restart shell to apply changes
-exec zsh
-exec bash -l
+# Download a Nerd Font
+curl -fLo "DroidSansMonoNerdFontComplete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+
+# Instruction for manual font activation
+echo "Nerd Font downloaded. Please manually set 'DroidSansMonoNerdFontComplete.otf' as the font in your terminal emulator settings."
+
+# Prompt to restart shell
+read -p "Restart shell now? (y/n): " -n 1 -r
+echo
+if [[ \$REPLY =~ ^[Yy]$ ]]
+then
+    exec zsh
+fi
