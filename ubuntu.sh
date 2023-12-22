@@ -36,11 +36,3 @@ source ~/.zshrc
 # Restart shell to apply changes
 exec zsh
 exec bash -l
-
-# Prompt to restart shell
-read -p "Restart shell now? (y/n): " -n 1 -r
-echo
-if [[ \$REPLY =~ ^[Yy]$ ]]
-then
-    exec zsh
-fi
