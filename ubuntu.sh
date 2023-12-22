@@ -33,12 +33,16 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
 # Apply changes to the current shell session
 source ~/.zshrc
 
+# Clear the terminal output
+clear
+
 # Display recommended font download message
 echo "Recommended Font: JetBrains Mono"
 echo "Download: https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip"
 
 # Prompt to restart shell
-read -p "Restart shell now? (y/n): " -n 1 -r
+echo -n "Restart shell now? (y/n): "
+read REPLY
 echo
 if [[ \$REPLY =~ ^[Yy]$ ]]
 then
