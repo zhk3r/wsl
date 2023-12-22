@@ -26,6 +26,3 @@ curl -fsSL -o ~/.oh-my-zsh/custom/themes/simple-path.zsh-theme https://raw.githu
 
 # Update ZSH_THEME in .zshrc to use 'simple-path'
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
-
-# Apply changes to the current shell session
-exec zsh
