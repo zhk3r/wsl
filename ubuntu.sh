@@ -31,6 +31,4 @@ sed -i '/plugins=(git)/a plugins=(zsh-syntax-highlighting)\nplugins=(zsh-autosug
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
 
 # Apply changes to the current shell session
-source ~/.zshrc
-exec zsh
 exec zsh
