@@ -32,11 +32,5 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
 
 # Apply changes to the current shell session
 source ~/.zshrc
-
-# Prompt to restart shell
-read -p "Restart shell now? (y/n): " -n 1 -r
-echo
-if [[ \$REPLY =~ ^[Yy]$ ]]
-then
-    exec zsh
-fi
+exec zsh
+exec zsh
