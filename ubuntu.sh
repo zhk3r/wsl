@@ -24,8 +24,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # Modify .zshrc to include new plugins
 sed -i '/plugins=(git)/a plugins=(zsh-syntax-highlighting)\nplugins=(zsh-autosuggestions)' ~/.zshrc
 
-# Create custom theme file
-cat << 'EOF' > ~/.oh-my-zsh/custom/themes/simple-path.zsh-theme
+# Ensure the custom theme directory exists
+mkdir -p ~/.oh-my-zsh/custom/themes
+
+# Create the custom theme file
+cat << 'EOF' > ~/.oh-my-zsh/custom/themes/simple-path.theme-zsh-theme
 # Determine CARETCOLOR based on whether the user is root or not
 if [ "\$USER" = "root" ]; then
     CARETCOLOR="red"
@@ -50,12 +53,8 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="› %{\$reset_color%}"
 MODE_INDICATOR="%{\$fg_bold[magenta]%}<%{\$reset_color%}%{\$fg[magenta]%}<<%{\$reset_color%}"
 EOF
 
-# Correcting the issue with the custom theme script in .zshrc
+# Update .zshrc to source the new theme file
 sed -i '/^source \$ZSH\/oh-my-zsh.sh/a \# Custom theme configuration\nsource ~/.oh-my-zsh/custom/themes/simple-path.theme-zsh-theme' ~/.zshrc
 
 # Apply changes to the current shell session
 source ~/.zshrc
-
-# Restart shell to apply changes
-exec zsh
-exec bash -l
