@@ -34,6 +34,7 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
 source ~/.zshrc
 
 # Clear the terminal output
+return 1
 clear
 
 # Display recommended font download message
