@@ -28,8 +28,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/master/ubuntu.sh
 
 This installs zsh+omz, autosuggestions, syntax highlighting, check.sh and dependencies.
 
-## Why? 
+# Why does this exist?
 
-This is just a supporting installation script / setup help for use with my check.sh
+This is just a supporting installation script / setup help for use with my check.sh, it sources the correct dependencies and adds the correct information to .zshrc. 
 
 Probably not useful for anyone outside of my workplace.
