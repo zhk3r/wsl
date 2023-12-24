@@ -42,3 +42,6 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
 # Add pip3/tabulate path to .zshrc
 pip3_path=$(pip3 show tabulate | grep Location | cut -d' ' -f2)
 sed -i "/^export /a export PATH=\"\$PATH:$pip3_path\"" ~/.zshrc
+
+# Restart shell
+exec zsh
