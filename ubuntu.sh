@@ -38,7 +38,3 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Update ZSH_THEME in .zshrc to use 'simple-path'
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
-echo 'ZSH_THEME="simple-path"' >> ~/.zshrc
-
-# Apply changes to the current shell session
-exec zsh
