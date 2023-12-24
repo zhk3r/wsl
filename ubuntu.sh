@@ -3,6 +3,9 @@
 # Update package lists
 sudo apt-get update
 
+# Install Python 3 and pip3
+sudo apt-get install -y python3 python3-pip
+
 # Install necessary packages
 sudo apt-get install -y whois curl openssl lolcat grc boxes zsh
 
