@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get install -y python3 python3-pip
 
 # Install pip3 packages
-pip3 install tabulate
+pip3 install tabulate pip3 install colorama
 
 # Install necessary packages
 sudo apt-get install -y whois curl openssl lolcat grc boxes zsh
