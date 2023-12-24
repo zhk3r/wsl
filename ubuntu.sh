@@ -38,3 +38,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Update ZSH_THEME in .zshrc to use 'simple-path'
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
+
+# Add pip3/tabulate path to .zshrc
+pip3_path=$(pip3 show tabulate | grep Location | cut -d' ' -f2)
+sed -i "/^export /a export PATH=\"\$PATH:$pip3_path\"" ~/.zshrc
