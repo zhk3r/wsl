@@ -35,3 +35,7 @@ else
 {
     Write-Host "Please remember to reboot your system later to complete the installation."
 }
+
+# Additional setup reminder
+Write-Host "Remember, this was to install Linux - You still need to set it up. After creating your username and password, be sure to run the following command:"
+Write-Host "sh -c `"`$(curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/master/ubuntu.sh)`"`"
