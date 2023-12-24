@@ -12,7 +12,7 @@ Enabling Windows-Subsystem-for-Linux:
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 </pre>
 
-Install Windows-Subsystem-For-Linux:
+Installing the standard Ubuntu/Linux distro:
 
 <pre lang="shell">
 wsl --install
@@ -22,12 +22,6 @@ Setting the default WSL version to 2:
 
 <pre lang="shell">
 wsl --set-default-version 2
-</pre>
-
-Installing Ubuntu (you are free to choose another version):
-
-<pre lang="shell">
-wsl --install -d Ubuntu
 </pre>
 
 # Setting up your shell and dependencies
