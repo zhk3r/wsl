@@ -6,6 +6,9 @@ sudo apt-get update
 # Install Python 3 and pip3
 sudo apt-get install -y python3 python3-pip
 
+# Install pip3 packages
+pip3 install tabulate
+
 # Install necessary packages
 sudo apt-get install -y whois curl openssl lolcat grc boxes zsh
 
@@ -30,8 +33,11 @@ curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/main/simple-path.zsh-them
 # Modify .zshrc to include new plugins
 sed -i '/plugins=(git)/a plugins=(zsh-syntax-highlighting)\nplugins=(zsh-autosuggestions)' ~/.zshrc
 
+# Set ZSH environment variable
+export ZSH="$HOME/.oh-my-zsh"
+
 # Update ZSH_THEME in .zshrc to use 'simple-path'
-sed -i 's/^ZSH_THEME=.*/ZSH_THEME="simple-path"/' ~/.zshrc
+echo 'ZSH_THEME="simple-path"' >> ~/.zshrc
 
 # Apply changes to the current shell session
 exec zsh
