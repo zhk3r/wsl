@@ -50,7 +50,7 @@ Probably not useful for anyone outside of my workplace.
 
 ---
 
-# Troubleshooting
+### Troubleshooting
 
 **ERROR: If you can't enable WSL you're likely missing the WSL2 kernel:**
 - [Download from Microsoft](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
