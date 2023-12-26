@@ -1,5 +1,7 @@
 # Installing Windows Subsystem for Linux
 
+> Fastest way to set it all up: Download 'wsl.ps1' and run it with admin privileges.
+
 Enabling Hyper-V:
 
 <pre lang="shell">
