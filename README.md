@@ -24,15 +24,22 @@ Setting the default WSL version to 2:
 wsl --set-default-version 2
 </pre>
 
+### NOTE: If you can't enable WSL you're likely missing the WSL2 kernel: 
+- [Download from Microsoft](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+- Requires a restart of your computer after install.
+- After the reboot you can ```wsl --set-default-version 2``` in PowerShell.
+
 # Setting up your shell and dependencies
 
-After creating your username and password, simply copy-paste this into your Ubuntu terminal
+After creating your UNIX username and password, simply copy-paste this into your Ubuntu terminal
 
 <pre lang="bash">
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/master/ubuntu.sh)"
 </pre>
 
-This installs zsh+omz, autosuggestions, syntax highlighting, check.sh and dependencies.
+This install zsh+oms (our shell) autosuggestions and syntax autohighlighting, my check.sh function and all dependencies.
+
+Type ```exec zsh``` to restart the shell to ensure everything went according to plan :)
 
 # Why does this exist?
 
