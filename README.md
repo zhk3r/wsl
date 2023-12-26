@@ -52,7 +52,7 @@ Probably not useful for anyone outside of my workplace.
 
 ### Troubleshooting
 
-**ERROR: If you can't enable WSL you're likely missing the WSL2 kernel:**
+**ERROR: If you can't make it past step 1 you're likely missing the WSL2 kernel:**
 - [Download from Microsoft](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 - Requires a restart of your computer after install.
 - Now you can enable WSL2 and start the Ubuntu distro.
