@@ -19,6 +19,18 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All -NoRes
 # Enable Windows Subsystem for Linux
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
 
+# Check if WSL 2 is installed
+if (-not (wsl --list --quiet | Select-String -Pattern "WSL 2"))
+{
+    # Download WSL 2 kernel update if not installed
+    $wslUpdateUrl = "https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi"
+    $wslUpdateFile = "$env:TEMP\wsl_update_x64.msi"
+    Invoke-WebRequest -Uri $wslUpdateUrl -OutFile $wslUpdateFile
+
+    # Install the downloaded MSI
+    Start-Process msiexec.exe -ArgumentList "/i", $wslUpdateFile, "/quiet", "/norestart" -Wait
+}
+
 # Install WSL 2 and Ubuntu distribution
 wsl --install -d Ubuntu
 
