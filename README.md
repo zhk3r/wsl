@@ -1,6 +1,12 @@
 # Installing Windows Subsystem for Linux
 
-> Fastest way to set it all up: Download 'wsl.ps1' and run it with admin privileges.
+> The fastest method would be to copy-paste this into PowerShell:
+
+<pre lang="shell">
+iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/zhk3r/wsl/master/wsl.ps1')
+</pre>
+
+> Or you can manually do the following:
 
 Enabling Hyper-V:
 
