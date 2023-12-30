@@ -37,4 +37,15 @@ sed -i '/plugins=(git)/c\plugins=(git zsh-syntax-highlighting zsh-autosuggestion
 # Update ZSH_THEME in .zshrc to use 'simple-path'
 sed -i 's/^ZSH_THEME="robbyrussell"/ZSH_THEME="simple-path"/' $HOME/.zshrc
 
+# Add 'check' to PATH if it's not already there (replace '/path/to/check' with actual path)
+check_dir="/path/to/check"
+if ! grep -q "export PATH=\"$check_dir:\$PATH\"" ~/.zshrc; then
+    echo "export PATH=\"$check_dir:\$PATH\"" >> ~/.zshrc
+fi
+
+# Source 'check_function.zsh' if it's not already sourced
+if ! grep -q "source $check_dir/check_function.zsh" ~/.zshrc; then
+    echo "source $check_dir/check_function.zsh" >> ~/.zshrc
+fi
+
 # Note: The shell won't be restarted in the script. The user should manually execute 'exec zsh' or log out and back in.
