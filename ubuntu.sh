@@ -37,8 +37,4 @@ sed -i '/plugins=(git)/c\plugins=(git zsh-syntax-highlighting zsh-autosuggestion
 # Update ZSH_THEME in .zshrc to use 'simple-path'
 sed -i 's/^ZSH_THEME="robbyrussell"/ZSH_THEME="simple-path"/' $HOME/.zshrc
 
-# Add pip3/tabulate path to .zshrc
-pip3_path=$(python3 -m site --user-base)/bin
-echo "export PATH=\"\$PATH:$pip3_path\"" >> $HOME/.zshrc
-
 # Note: The shell won't be restarted in the script. The user should manually execute 'exec zsh' or log out and back in.
