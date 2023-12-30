@@ -37,8 +37,8 @@ sed -i '/plugins=(git)/c\plugins=(git zsh-syntax-highlighting zsh-autosuggestion
 # Update ZSH_THEME in .zshrc to use 'simple-path'
 sed -i 's/^ZSH_THEME="robbyrussell"/ZSH_THEME="simple-path"/' $HOME/.zshrc
 
-# Add 'check' to PATH if it's not already there
-check_dir="YOUR_ACTUAL_PATH_TO_CHECK" # Replace with your actual path
+# Define the path to the 'check' directory
+check_dir="$HOME/check"
 path_line="export PATH=\"$check_dir:\$PATH\""
 source_line="source $check_dir/check_function.zsh"
 
@@ -51,3 +51,5 @@ fi
 if ! grep -qxF "$source_line" ~/.zshrc; then
     echo "$source_line" >> ~/.zshrc
 fi
+
+echo "Type exec zsh to restart your shell!"
