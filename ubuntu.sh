@@ -43,13 +43,13 @@ path_line="export PATH=\"$check_dir:\$PATH\""
 source_line="source $check_dir/check_function.zsh"
 
 # Check and update .zshrc for PATH
-if ! grep -qxF "$path_line" ~/.zshrc; then
+if ! grep -Fxq "$path_line" ~/.zshrc; then
     echo "$path_line" >> ~/.zshrc
 fi
 
 # Check and update .zshrc for sourcing check_function.zsh
-if ! grep -qxF "$source_line" ~/.zshrc; then
+if ! grep -Fxq "$source_line" ~/.zshrc; then
     echo "$source_line" >> ~/.zshrc
 fi
 
-echo "Type exec zsh to restart your shell!"
+echo -e "Type exec zsh to restart your shell!"
