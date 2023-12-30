@@ -42,14 +42,16 @@ check_dir="$HOME/check"
 path_line="export PATH=\"$check_dir:\$PATH\""
 source_line="source $check_dir/check_function.zsh"
 
-# Check and update .zshrc for PATH
-if ! grep -Fxq "$path_line" ~/.zshrc; then
-    echo "$path_line" >> ~/.zshrc
-fi
+# Remove existing lines related to 'check' and 'check_function.zsh'
+sed -i '/export PATH=".*check:/d' ~/.zshrc
+sed -i '/source .*check_function.zsh/d' ~/.zshrc
 
-# Check and update .zshrc for sourcing check_function.zsh
-if ! grep -Fxq "$source_line" ~/.zshrc; then
-    echo "$source_line" >> ~/.zshrc
-fi
+# Insert the necessary lines at a specific location
+# Replace 'YOUR_MARKER_LINE' with the actual line to search for
+sed -i '/YOUR_MARKER_LINE/a\
+'"export ZSH="$HOME/.oh-my-zsh""'
+'"$source $ZSH/oh-my-zsh.sh" ~/.zshrc
 
-echo -e "Type exec zsh to restart your shell!"
+exec zsh
+
+echo  "Type exec zsh to restart your shell!"
