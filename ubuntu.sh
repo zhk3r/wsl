@@ -13,11 +13,11 @@ sudo pip3 install colorama
 # Install necessary packages
 sudo apt-get install -y whois curl openssl lolcat grc boxes zsh
 
-# Change default shell to zsh
-sudo chsh -s "$(which zsh)" $USER
-
 # Install Oh My Zsh
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Change default shell to zsh
+sudo chsh -s "$(which zsh)" $USER
 
 # Clone check.sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/check/master/install.sh)"
