@@ -13,14 +13,11 @@ sudo pip3 install colorama
 # Install necessary packages
 sudo apt-get install -y whois curl openssl lolcat grc boxes zsh
 
-# Install Oh My Zsh
-yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Change default shell to zsh
 sudo chsh -s "$(which zsh)" $USER
 
-# Clone check.sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/check/master/install.sh)"
+# Install Oh My Zsh
+yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Clone zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
@@ -30,6 +27,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM
 
 # Download the simple-path theme from the wsl repository
 curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/main/simple-path.zsh-theme -o "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/simple-path.zsh-theme"
+
+# Clone check.sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/check/master/install.sh)"
 
 # Modify .zshrc to include new plugins
 sed -i '/plugins=(git)/c\plugins=(git zsh-syntax-highlighting zsh-autosuggestions)' $HOME/.zshrc
