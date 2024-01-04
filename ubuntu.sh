@@ -19,6 +19,9 @@ sudo chsh -s "$(which zsh)" $USER
 # Install Oh My Zsh
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Source .zshrc
+source .zshrc
+
 # Clone zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
 
