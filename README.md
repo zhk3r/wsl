@@ -36,7 +36,7 @@ After creating your UNIX username and password, simply copy-paste this into your
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/master/ubuntu.sh)"
 </pre>
 
-This install zsh+oms (our shell) autosuggestions and syntax autohighlighting, my check.sh function and all dependencies.
+This install zsh+oms (our shell) autosuggestions and syntax autohighlighting, dependencies in terms of dig, curl, awk, openssl, whois and more.
 
 Type ```exec zsh``` to restart the shell to ensure everything went according to plan :)
 
