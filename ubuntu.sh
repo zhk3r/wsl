@@ -7,11 +7,11 @@ sudo apt-get update
 sudo apt-get install -y python3 python3-pip
 
 # Install pip3 packages with sudo for system-wide installation
-sudo pip3 install tabulate
-sudo pip3 install colorama
-sudo pip3 install dnspython
-sudo pip3 install dnsresolver
-sudo pip3 install idna
+pip3 install tabulate
+pip3 install colorama
+pip3 install dnspython
+pip3 install dnsresolver
+pip3 install idna
 
 # Install necessary packages
 sudo apt-get install -y whois curl openssl lolcat grc boxes zsh
