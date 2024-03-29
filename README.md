@@ -1,62 +1,101 @@
 # Installing Windows Subsystem for Linux
 
+## Using the script
+
+[**Download wsl.ps1**](https://gitlab.group.one/christian-mathias.moen/wsl/-/raw/main/wsl.ps1?ref_type=heads&inline=false) then start PowerShell as Administrator and run the following command:
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process; cd Downloads; ./wsl.ps1
+```
+
+## Using the manual method
+
 Enabling Hyper-V:
 
-<pre lang="shell">
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-</pre>
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All -NoRestart
+```
 
-Enabling Windows-Subsystem-for-Linux:
+Enabling Windows Subsystem for Linux:
 
-<pre lang="shell">
+```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-</pre>
-
-Installing the standard Ubuntu/Linux distro:
-
-<pre lang="shell">
-wsl --install
-</pre>
+```
 
 Setting the default WSL version to 2:
 
-<pre lang="shell">
+```powershell
 wsl --set-default-version 2
-</pre>
+```
 
----
+Installing the Ubuntu 22.04 distro:
 
-# Setting up your shell and dependencies
+```powershell
+wsl --install -d Ubuntu-22.04
+```
 
-Now that you've installed a Linux distro you can launch it through Terminal using the *arrow-down* button.
+## Setting up Ubuntu
 
-After creating your UNIX username and password, simply copy-paste this into your Ubuntu terminal
+ **Here's how to up your game in 5 short steps!**
 
-<pre lang="bash">
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zhk3r/wsl/master/ubuntu.sh)"
-</pre>
+1) [Open this link in a new tab, CTRL+A and CTRL+C then CTRL+W.](https://gitlab.group.one/christian-mathias.moen/wsl/-/raw/main/install.sh?ref_type=heads)
 
-This install zsh+oms (our shell) autosuggestions and syntax autohighlighting, dependencies in terms of dig, curl, awk, openssl, whois and more.
+2) Go to your Terminal and open Ubuntu and **type** the following command:
 
-Type ```exec zsh``` to restart the shell to ensure everything went according to plan :)
+```shell
+nano install.sh
+```
 
----
+3) Paste the content you copied above, 'Paste anyway' then press CTRL+S followed by CTRL+X to save and exit.
 
-## Why does this exist?
+4) Copy-paste the following commands into your Terminal:
 
-This is just a supporting installation script / setup help for use with my check.sh, it sources the correct dependencies and adds the correct information to .zshrc. 
+```shell
+chmod +x install.sh && ./install.sh
+```
 
-Probably not useful for anyone outside of my workplace.
+5) Now just follow the on-screen instructions!
 
----
+## Shorthand view of the repos
 
-### Troubleshooting
+You can invoke the help sections by using the command with no arguments.
+
+```
+check           Quickly look up a relevant domain information
+ssl             SSL Utility Suite for creating and troubleshooting SSL
+toolkit         Other tools that can be useful (and some for flavor)
+```
+
+Type the command with no argument for help section, example: `ssl` or `check` or `toolkit`
+
+## Pimping your Terminal
+
+You can make your terminal look pretty sweet:
+
+1) Download and install this font: <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Lilex.zip>
+2) Open this website and press Get Theme: <https://windowsterminalthemes.dev/?theme=tokyonight>
+
+`Now the theme is copied to your clipboard:`
+
+1. Press the down-arrow in your Terminal and press Settings --> Startup --> Default profile --> Your distro.
+2. Settings --> Left corner, press Open JSON file --> CTRL+F 'schemes' --> Put your insert after the first `},`
+2- Press Enter to make a new line and CTRL+V your theme and press `,` `[comma]` --> CTRL+S and exit your editor.
+3. Settings --> Your distro --> Appearance --> Change colorscheme and font, adjust other settings as you please.
+
+## Troubleshooting
 
 **ERROR: If you can't make it past step 1 you're likely missing the WSL2 kernel:**
+
 - [Download from Microsoft](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 - Requires a restart of your computer after install.
 - Now you can enable WSL2 and start the Ubuntu distro.
 
-Got any more issues? 
+**ERROR: That didn't work either?! Well try running the following command:**
+
+```powershell
+wsl.exe --update
+```
+
+Got any more issues?
 
 （︶^︶）
